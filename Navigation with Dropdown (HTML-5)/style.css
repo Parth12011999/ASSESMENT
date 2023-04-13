@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   box-sizing: border-box;
   margin: 0%;
@@ -139,3 +140,147 @@
   color: white;
   outline: 1px solid white;
 }
+=======
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+.navigation {
+  height: 80px;
+  background-color: blue;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+.logo {
+  padding: 0 10px;
+}
+
+.logo label {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navlinks styling */
+.nav-links {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-link label {
+  color: white;
+}
+
+.nav-link:hover {
+  background-color: rgb(3, 3, 77);
+  border-radius: 5px;
+}
+
+
+/* Dropdown Menu styling */
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.dropdown:hover {
+  background-color: rgb(3, 3, 77);
+}
+
+.drop-btn {
+  color: white;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  background-color: blue;
+  min-width: 130px;
+}
+
+.dropdown-menu label {
+  color: white;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu label {
+  display: block;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.dropdown-menu label:hover {
+  background-color: rgb(3, 3, 77);
+}
+
+/* Side Menu styling */
+.sidedown {
+  position: relative;
+}
+.side-menu {
+  display: none;
+  position: absolute;
+  left: 125px;
+  top: 0px;
+  background-color: blue;
+  min-width: 130px;
+}
+
+.side-menu label {
+  color: white;
+}
+
+.sidedown:hover .side-menu,
+.side-menu label {
+  display: block;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.sidedown:hover {
+  background-color: rgb(3, 3, 77);
+}
+
+/* Button styling */
+.btn-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.login-btn {
+  padding: 5px 10px;
+  outline: transparent;
+  color: blue;
+  border-radius: 5px;
+  margin: 0px 10px;
+}
+
+.login-btn:hover {
+  background-color: blue;
+  color: white;
+  outline: 1px solid white;
+}
+>>>>>>> 5fda02e (Assesment3 done)
