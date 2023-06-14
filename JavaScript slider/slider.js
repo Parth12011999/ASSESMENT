@@ -149,12 +149,10 @@ nextButton.addEventListener('click', ()=>{
     if (slideIndex > Images.length - 1) {
         slideIndex = 0
     }
-    // let ImgTag2 = sliderImg.createElement('img')
-    // ImgTag2.src = Images.src
+
 
     blur()
     Images[slideIndex].style.opacity = 1;
-    // let slide = Images[slideIndex]
     sliderImg.style.backgroundImage = `url(${Images[slideIndex].src})`
 })
 
@@ -166,7 +164,6 @@ prevButton.addEventListener('click', ()=>{
     }
     blur()
     Images[slideIndex].style.opacity = 1;
-    // let slide = Images[slideIndex]
     sliderImg.style.backgroundImage = `url(${Images[slideIndex].src})`
 
 })
