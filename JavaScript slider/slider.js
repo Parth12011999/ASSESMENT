@@ -1,7 +1,7 @@
 const slides = document.querySelector(".img-show");
 var slideIndex = 0;
 const sliderImg = document.querySelector('.active-img')
-const img = {
+const Source = {
     src : [
     "https://picsum.photos/id/1/200/100",
     "https://picsum.photos/id/2/200/100",
@@ -14,59 +14,65 @@ const img = {
     "https://picsum.photos/id/9/200/100",
     "https://picsum.photos/id/10/200/100",
     "https://picsum.photos/id/11/200/100",
-    "https://picsum.photos/id/12/200/100",
+    "https://picsum.photos/id/12/200/100"
     ]
 }
 
-img.src.map(src=>{
+Source.src.map(src=>{
 
     // Creating Img tag using create elemnent
     let ImgTag = document.createElement("img");
     ImgTag.src = src;
-
-    // Appending img tages in container
+    console.log(ImgTag)
     slides.appendChild(ImgTag)
 })
+let Images = document.querySelectorAll('.img-show img')
+console.log(Images)
 
+function blur(){
+    Images.forEach(img=>{
+        img.style.opacity = 0.3
+    })
+}
+blur()
 
-
-const Images = slides.querySelectorAll('img')
 let nextButton = document.querySelector('.next');
 let prevButton = document.querySelector('.prev');
 
 // By default showing image
-Images[slideIndex].classList.add('active')
-sliderImg.appendChild(Images[slideIndex])
+Images[slideIndex].style.opacity = 1;
+sliderImg.style.backgroundImage = `url(${Images[slideIndex].src})`
 
 // Next button
 nextButton.addEventListener('click', ()=>{
-    if (slideIndex < img.src.length - 1) {
-        slideIndex++
-    }
-    else{
+    slideIndex++
+    if (slideIndex > Images.length - 1) {
         slideIndex = 0
     }
-    // let ImgTag2 = sliderImg.createElement('img')
-    // ImgTag2.src = Images.src
-    let slide = Images[slideIndex]
-    slide.classList.add('active')
-    sliderImg.appendChild(slide)
-    slide.previousSibling.remove()
+
+
+    blur()
+    Images[slideIndex].style.opacity = 1;
+    sliderImg.style.backgroundImage = `url(${Images[slideIndex].src})`
 })
 
 // Prev button
 prevButton.addEventListener('click', ()=>{
-    if (slideIndex > 0) {
-        slideIndex--
+    slideIndex --
+    if (slideIndex < 0) {
+        slideIndex = Images.length - 1 
     }
-    else{
-        slideIndex = img.src.length - 1 
-    }
+    blur()
+    Images[slideIndex].style.opacity = 1;
+    sliderImg.style.backgroundImage = `url(${Images[slideIndex].src})`
 
-    let slide = Images[slideIndex]
-    sliderImg.appendChild(slide)
-    slide.classList.add('active')
-    slide.previousSibling.remove()
+})
 
+Images.forEach(img=>{
+    img.addEventListener('click',()=>{
+        blur()
+        img.style.opacity = 1;
+        sliderImg.style.backgroundImage = `url(${img.src})`
+    })
 })
 
