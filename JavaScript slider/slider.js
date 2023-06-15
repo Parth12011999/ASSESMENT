@@ -14,7 +14,6 @@ const Source = {
     ]
 }
 
-
 // const Source = {
 //     src : [
 //     "https://picsum.photos/id/1/200/100",
@@ -82,11 +81,18 @@ prevButton.addEventListener('click', ()=>{
 
 })
 
+
 Images.forEach(img=>{
-    img.addEventListener('click',()=>{
+    img.addEventListener('click',(e)=>{
         blur()
         img.style.opacity = 1;
         sliderImg.style.backgroundImage = `url(${img.src})`
+        let sliced = img.src.slice(42,57)
+        // console.log(sliced)
+       slideIndex = Source.src.indexOf(sliced)
+    //    console.log(slideIndex)
     })
 })
 
+let some = Source.src.indexOf('assets/art5.jpg')
+console.log(some)
