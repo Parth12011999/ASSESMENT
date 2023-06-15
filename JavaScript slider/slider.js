@@ -2,21 +2,35 @@ const slides = document.querySelector(".img-show");
 var slideIndex = 0;
 const sliderImg = document.querySelector('.active-img')
 const Source = {
-    src : [
-    "https://picsum.photos/id/1/200/100",
-    "https://picsum.photos/id/2/200/100",
-    "https://picsum.photos/id/3/200/100",
-    "https://picsum.photos/id/4/200/100",
-    "https://picsum.photos/id/5/200/100",
-    "https://picsum.photos/id/6/200/100",
-    "https://picsum.photos/id/7/200/100",
-    "https://picsum.photos/id/8/200/100",
-    "https://picsum.photos/id/9/200/100",
-    "https://picsum.photos/id/10/200/100",
-    "https://picsum.photos/id/11/200/100",
-    "https://picsum.photos/id/12/200/100"
+    src: [
+        'assets/art1.jpg',
+        'assets/art2.jpg',
+        'assets/art3.jpg',
+        'assets/art4.jpg',
+        'assets/art5.jpg',
+        'assets/art6.jpg',
+        'assets/art7.jpg',
+        'assets/art8.jpg'
     ]
 }
+
+
+// const Source = {
+//     src : [
+//     "https://picsum.photos/id/1/200/100",
+//     "https://picsum.photos/id/2/200/100",
+//     "https://picsum.photos/id/3/200/100",
+//     "https://picsum.photos/id/4/200/100",
+//     "https://picsum.photos/id/5/200/100",
+//     "https://picsum.photos/id/6/200/100",
+//     "https://picsum.photos/id/7/200/100",
+//     "https://picsum.photos/id/8/200/100",
+//     "https://picsum.photos/id/9/200/100",
+//     "https://picsum.photos/id/10/200/100",
+//     "https://picsum.photos/id/11/200/100",
+//     "https://picsum.photos/id/12/200/100"
+//     ]
+// }
 
 Source.src.map(src=>{
 
