@@ -118,6 +118,26 @@ const Source = {
     ]
 }
 
+<<<<<<< HEAD
+=======
+// const Source1 = {
+//     src : [
+//     "https://picsum.photos/id/1/200/100",
+//     "https://picsum.photos/id/2/200/100",
+//     "https://picsum.photos/id/3/200/100",
+//     "https://picsum.photos/id/4/200/100",
+//     "https://picsum.photos/id/5/200/100",
+//     "https://picsum.photos/id/6/200/100",
+//     "https://picsum.photos/id/7/200/100",
+//     "https://picsum.photos/id/8/200/100",
+//     "https://picsum.photos/id/9/200/100",
+//     "https://picsum.photos/id/10/200/100",
+//     "https://picsum.photos/id/11/200/100",
+//     "https://picsum.photos/id/12/200/100"
+//     ]
+// }
+
+>>>>>>> bf1c14c (ok)
 Source.src.map(src=>{
 
     // Creating Img tag using create elemnent
@@ -168,12 +188,20 @@ prevButton.addEventListener('click', ()=>{
 
 })
 
+
 Images.forEach(img=>{
-    img.addEventListener('click',()=>{
+    img.addEventListener('click',(e)=>{
         blur()
         img.style.opacity = 1;
         sliderImg.style.backgroundImage = `url(${img.src})`
+        let sliced = img.src.slice(42,57)
+        // console.log(sliced)
+       slideIndex = Source.src.indexOf(sliced)
+        // console.log(slideIndex)
     })
 })
+<<<<<<< HEAD
 
 >>>>>>> 642df2e (done)
+=======
+>>>>>>> bf1c14c (ok)
