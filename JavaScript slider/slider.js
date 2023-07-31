@@ -137,15 +137,20 @@ const Source = {
 //     ]
 // }
 
+<<<<<<< HEAD
 >>>>>>> bf1c14c (ok)
 Source.src.map(src=>{
 
+=======
+Source.src.map(source1=>{
+>>>>>>> 0fbfefa (done)
     // Creating Img tag using create elemnent
     let ImgTag = document.createElement("img");
-    ImgTag.src = src;
+    ImgTag.src = source1;
     console.log(ImgTag)
     slides.appendChild(ImgTag)
 })
+
 let Images = document.querySelectorAll('.img-show img')
 console.log(Images)
 
@@ -159,6 +164,8 @@ blur()
 let nextButton = document.querySelector('.next');
 let prevButton = document.querySelector('.prev');
 
+
+// console.log(Images[].src)
 // By default showing image
 Images[slideIndex].style.opacity = 1;
 sliderImg.style.backgroundImage = `url(${Images[slideIndex].src})`
@@ -169,7 +176,6 @@ nextButton.addEventListener('click', ()=>{
     if (slideIndex > Images.length - 1) {
         slideIndex = 0
     }
-
 
     blur()
     Images[slideIndex].style.opacity = 1;
@@ -185,7 +191,6 @@ prevButton.addEventListener('click', ()=>{
     blur()
     Images[slideIndex].style.opacity = 1;
     sliderImg.style.backgroundImage = `url(${Images[slideIndex].src})`
-
 })
 
 
